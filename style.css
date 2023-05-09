@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+}
+
+header {
+    background-image: url(./imagenes/3015223.jpg);
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.Titulo1 {
+    font-family: 'Courgette', cursive;
+    color: white;
+    padding-left: 50px;
+}
+
+.subtitulo1 {
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.imagen1{
+    text-align: center;
+    font-family: 'Poppins', bold;
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+#formularioTareas{
+    display: grid;
+    justify-content: space-around;
+    justify-items: start;
+    text-align: center;
+}
+
+.subtitulo2{
+    font-family: 'Poppins', bold;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+input{
+    width: 900px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+#descripcion{
+    height: 120px;
+}
+
+button{
+    background-color: blueviolet;
+    border-radius: 5px;
+    color: white;
+    transform: scale(1.2); 
+    font-size: 10px;
+    padding: 5px 10px;
+}
+
+.listaDeTareas{
+    font-family: 'Poppins', bold;
+    display: grid;
+    justify-content: start;
+    justify-items: center;
+}
+
+#TareasPorRealizar{
+    display: block;
+    margin-left: 220px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+@media (max-width:768px){
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+}

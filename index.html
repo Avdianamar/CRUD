@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header> 
+        <h1 class="Titulo1">Diario <br> Estelar</h1>
+        <h1 class="subtitulo1">¡Las estrellas te guiarán!</h1>
+    </header>
+    <main class="imagen1">
+        <img src="./imagenes/20230506_150827_0000.png" alt="logo de la pagina">
+        <p>“El Sol te guiará en el día. <br> Las estrellas te guiarán por la noche.”</p>
+    </main>   
+    <form id="formularioTareas">
+        <label class="subtitulo2" for="tarea">Tarea</label>
+        <br>
+        <input type="text" id="tarea">
+        <br>
+        <label class="subtitulo2" for="descripcion">Descripción</label>
+        <br>
+        <input type="text" id="descripcion">
+        <br>
+        <button class="subtitulo2" type="submit">Agregar Tarea</button>
+    </form>
+    <main class="listaDeTareas">
+        <label class="subtitulo2" for="TareasPorRealizar">Tareas por Realizar</label>
+        <ul id="TareasPorRealizar"></ul>
+    </main>
+    <footer></footer>
+    <script src="./main.js"></script>
+</body>
+</html>

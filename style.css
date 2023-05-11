@@ -26,7 +26,7 @@ header {
     text-align: center;
     font-family: 'Poppins', bold;
     font-size: 25px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 #formularioTareas{
@@ -65,18 +65,42 @@ button{
     font-family: 'Poppins', bold;
     display: grid;
     justify-content: start;
-    justify-items: center;
+    justify-items: start;
+    margin-left: 230px;
+    margin-right: 230px;
+    margin-top: 50px;
+    box-shadow: 0 0 5px rgba(199, 8, 167, 0.671);
+    padding-left: 10px;
 }
 
 #TareasPorRealizar{
-    display: block;
-    margin-left: 220px;
     margin-top: 20px;
     font-weight: bold;
 }
 
+footer{
+    background-color: rgb(172, 109, 231);
+    margin-top: 50px;
+    font-family: 'Poppins', bold;
+    text-align: center;
+}
+
 @media (max-width:768px){
-    body {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:768px){
+    .imagen1 .subtitulo2 input {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:768px){
+    .listaDeTareas {
         display: flex;
         flex-direction: column;
     }

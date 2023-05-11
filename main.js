@@ -10,12 +10,13 @@ function mostrarTareas() {
     let infoDelHTML = '';
     tasks.forEach(function (task) {
         infoDelHTML += `
-            <li>
+            <li class="listTask">
                 <label>${task.tarea}</label>
                 <br>
                 <label>${task.descripcion}</label>
+                <br>
                 <button onclick="editarTarea(${task.id})">editar</button>
-                <button onclick="eliminarTarea(${task.id})">eliminar</button>
+                <button style="margin-left: 20px" onclick="eliminarTarea(${task.id})">eliminar</button>
             </li>
             <br>
             `;
@@ -58,7 +59,7 @@ function obtenerTareasGuardadas() {
     const listaDeTareasYaConvertidaEnUnArray = JSON.parse(
         listaDeTareasEnString
     );
-    contactos = [...listaDeTareasYaConvertidaEnUnArray];
+    tasks = [...listaDeTareasYaConvertidaEnUnArray];
 }
 
 obtenerTareasGuardadas();
@@ -68,6 +69,18 @@ function eliminarTarea(id){
     tasks = tasks.filter(function(task){
         return task.id !== id;
     })
+    guardarTareas(tasks);
+    mostrarTareas();
+}
+
+function editarTarea(id, nuevosValores) {
+    const indiceArrayTareaBuscada = tasks.findIndex(function (task) {
+        return task.id === id;
+    });
+    tasks[indiceArrayTareaBuscada] = {
+        ...tasks[indiceArrayTareaBuscada],
+        ...nuevosValores,
+    };
     guardarTareas(tasks);
     mostrarTareas();
 }

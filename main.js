@@ -10,7 +10,10 @@ function mostrarTareas() {
     let infoDelHTML = '';
     tasks.forEach(function (task) {
         infoDelHTML += `
-            <li style="box-shadow: 0 0 5px rgba(199, 8, 167, 0.671); padding: 0px 10px 10px 10px; margin-top: 20px; list-style-type: none;">
+            <li style="box-shadow: 0 0 5px rgba(199, 8, 167, 0.671); 
+                padding: 0px 10px 10px 10px; 
+                margin-top: 20px; 
+                list-style-type: none;">
                 <label>${task.tarea}</label>
                 <br>
                 <label>${task.descripcion}</label>

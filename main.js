@@ -10,7 +10,7 @@ function mostrarTareas() {
     let infoDelHTML = '';
     tasks.forEach(function (task) {
         infoDelHTML += `
-            <li class="listTask">
+            <li style="box-shadow: 0 0 5px rgba(199, 8, 167, 0.671); padding: 0px 10px 10px 10px; margin-top: 20px; list-style-type: none;">
                 <label>${task.tarea}</label>
                 <br>
                 <label>${task.descripcion}</label>
@@ -22,10 +22,10 @@ function mostrarTareas() {
             `;
     });
     tareasPorRealizar.innerHTML = infoDelHTML;
-}  
+}
 
-function crearId(){
-    return Number((Math.random()*1000).toFixed())
+function crearId() {
+    return Number((Math.random() * 1000).toFixed())
 }
 
 function guardarTarea(tarea, descripcion) {
@@ -65,13 +65,14 @@ function obtenerTareasGuardadas() {
 obtenerTareasGuardadas();
 mostrarTareas();
 
-function eliminarTarea(id){
-    tasks = tasks.filter(function(task){
+function eliminarTarea(id) {
+    tasks = tasks.filter(function (task) {
         return task.id !== id;
     })
     guardarTareas(tasks);
     mostrarTareas();
 }
+
 
 function editarTarea(id, nuevosValores) {
     const indiceArrayTareaBuscada = tasks.findIndex(function (task) {

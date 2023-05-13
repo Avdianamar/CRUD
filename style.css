@@ -64,13 +64,9 @@ button{
 .listaDeTareas{
     font-family: 'Poppins', bold;
     display: grid;
-    justify-content: start;
-    justify-items: start;
-    margin-left: 230px;
-    margin-right: 230px;
     margin-top: 50px;
-    box-shadow: 0 0 5px rgba(199, 8, 167, 0.671);
     padding-left: 10px;
+    justify-content: space-around;  
 }
 
 #TareasPorRealizar{
@@ -96,6 +92,14 @@ footer{
     .imagen1 .subtitulo2 input {
         display: flex;
         flex-direction: column;
+    }
+}
+
+@media (max-width:768px){
+    #formularioTareas {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
     }
 }
 
